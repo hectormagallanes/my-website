@@ -1,3 +1,93 @@
-h1 {
-  color: red;
+/* MISC */
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #110133;
+  font-family: 'Roboto Mono', monospace;
+}
+main {
+  display: flex;
+  justify-content: space-around;
+}
+.grid-card {
+  display: grid;
+  grid-template-areas:
+    'profile skills'
+    'profile projects';
+  grid-template-columns: 1fr 2fr;
+  height: 97vh;
+  width: 80vw;
+  margin: 10px;
+  grid-gap: 1rem;
+}
+.profile, .skills, .projects {
+  border: #3E00FF 3px solid;
+  background-color: #170055;
+  color: #B5FFD9;
+  border-radius: 20px;
+}
+
+/* PROFILE SECTION */
+.profile {
+  grid-area: profile;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 0 3rem;
+}
+.profile-img {
+  max-height: 50%;
+  max-width: 75%; 
+}
+.attributes {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+.attribute {
+  max-width: 50%;
+}
+
+/* SKILLS SECTION */
+.skills {
+  grid-area: skills;
+  padding: 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.skill-flexbox {
+  display: flex;
+  justify-content: space-evenly;
+}
+.skill-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.skill {
+  min-width: 35%;
+  margin: 10px;
+  align-self: center;
+}
+
+/* PROJECTS SECTION */
+.projects {
+  grid-area: projects;
+  padding: 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.project-list {
+  display: flex;
+  justify-content: space-evenly;
+}
+.project {
+  margin: 10px;
 }
