@@ -54,7 +54,7 @@ header {
   width: 100%;
   min-height: 200px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
 }
 .flex-col {
@@ -74,6 +74,9 @@ header {
   min-height: 160px; 
   width:0;
   border:1px solid #3E00FF;
+}
+.horizontal {
+  display: none;
 }
 
 /* PROJECTS */
@@ -112,11 +115,12 @@ header {
   flex-wrap: wrap;
 }
 .box {
-  width: 45%;
-  padding: 10px;
-  max-height: 300px;
+  width: 40%;
+  margin: 25px 0 50px;
+  height: 300px;
   display: flex;
   justify-content: center;
+  border: 1px solid red;
 }
 .box img {
   max-width: 100%;
@@ -124,6 +128,10 @@ header {
 }
 
 @media screen and (max-width: 768px) {
+  .hero h1 {
+    text-align: center;
+  }
+  /* PROJECTS */
   .flex-project {
     flex-direction: column;
   }
@@ -134,11 +142,35 @@ header {
   .project-description {
     max-width: 75%;
   }
-
+  /* ABOUT */
   .row-wrap {
     flex-direction: column;
   }
   .box {
     width: 75%;
+  }
+}
+@media screen and (max-width: 425px) {
+  header {
+    max-width: 100%;
+    }
+
+  /* SKILLS */
+  .flex-container {
+    flex-direction: column;
+  }
+  .vertical {
+    display: none;
+  }
+  .horizontal {
+    display: inline;
+    width: 75%;
+    border:1px solid #3E00FF;
+  }
+  .flex-col {
+    margin: 25px 0;
+  }
+  #web-skills .section-title {
+    text-align: center;
   }
 }
