@@ -4,6 +4,13 @@
   margin: 0;
   padding: 0;
 }
+a {
+  color: #B5FFD9;
+}
+a:visited {
+  text-decoration: underline;
+  color: #B5FFD9;
+}
 body {
   background-color: #110133;
   color: #B5FFD9;
